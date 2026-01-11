@@ -18,6 +18,7 @@ function createTempPath() {
 # CreatePath
 # $1 root
 # $2 string
+# echo path
 function createPath() {
   # Param
   local root=$1
@@ -25,7 +26,7 @@ function createPath() {
   # CreatePath
   local name="${string%:*}"
   local type="${string##*:}"
-  path="$root/$name"
+  local path="$root/$name"
   if [[ "$type" == 'dir' ]]; then
     mkdir -p "$path"
   elif [[ "$type" == 'file' ]]; then

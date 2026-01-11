@@ -13,6 +13,8 @@ setEnv 'ZD_ScriptLibPath' "$ZD_LibPath/script"
 # Source
 source "$ZD_ScriptLibPath/createPath.sh"
 
+# --------------------------------------------------
+
 # UploadReleasePath
 releaseUploadPath=$(createTempPath 'ZeroUploadRelease:dir')
 setEnv 'ZD_ReleaseUploadPath' "$releaseUploadPath"

@@ -8,6 +8,7 @@
 # GitPush
 # $1 githubRef
 # $2 message
+# echo message
 function gitPush() {
   # Param
   local githubRef=$1

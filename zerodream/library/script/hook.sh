@@ -10,6 +10,7 @@
 
 # Hook
 # $1 scriptPath
+# echo message
 function hook() {
   # Param
   local scriptPath=$1
