@@ -16,9 +16,9 @@ source "$ZD_ScriptLibPath/createPath.sh"
 # --------------------------------------------------
 
 # UploadReleasePath
-releaseUploadPath=$(createTempPath 'ZeroUploadRelease:dir')
+releaseUploadPath=$(createTempPath '__ZeroReleaseUpload:dir')
 setEnv 'ZD_ReleaseUploadPath' "$releaseUploadPath"
 
 # UploadArtifactPath
-artifactUploadPath=$(createTempPath 'ZeroUploadArtifact:dir')
+artifactUploadPath=$(createTempPath '__ZeroArtifactUpload:dir')
 setEnv 'ZD_ArtifactUploadPath' "$artifactUploadPath"

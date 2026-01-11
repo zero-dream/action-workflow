@@ -6,10 +6,13 @@
 # Dependence
 
 # Env
-# GITHUB_REF: ${{github.ref}}
+#   GITHUB_REF: ${{github.ref}}
 
 # --------------------------------------------------
 
+# Tip: It will disrupt the Workflow initialization and execute at the end of the steps
+
+# --------------------------------------------------
 # Source
 source "$ZD_ScriptLibPath/gitPush.sh"
 

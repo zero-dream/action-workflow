@@ -3,7 +3,19 @@
 
 # --------------------------------------------------
 
+# Dependence
+
+# Jobs.Steps
+#   checkout.with: token: ${{secrets.WORKFLOW_TOKEN}}
+# RepositoryPermissions (WORKFLOW_TOKEN):
+#   Contents:  Read and Write
+#   Workflows: Read and Write
+
+# --------------------------------------------------
+
 # Tip: Due to the workflows restrictions of GitHub, git commands can only run within $GITHUB_WORKSPACE
+
+# --------------------------------------------------
 
 # GitPush
 # $1 githubRef
