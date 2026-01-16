@@ -6,7 +6,7 @@
 
 # ReadConfig
 # $1 name
-# echo value
+# echo config
 function readConfig() {
   # Param
   local name=$1
