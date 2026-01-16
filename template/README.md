@@ -1,9 +1,9 @@
 
 <div align="center">
 
-  ### Action-Workflow
+  ### Workflow
 
-  The core of all Action-Workflow
+  The core of all Workflow
 
   \--------------------------------------------------
 
