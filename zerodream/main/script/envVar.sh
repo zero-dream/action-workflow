@@ -12,7 +12,6 @@ setEnv 'ZD_ScriptLibPath' "$ZD_LibPath/script"
 # DataPath
 setEnv 'ZD_DataPath' "$ZD_RootPath/data"
 setEnv 'ZD_ConfigDataPath' "$ZD_DataPath/config"
-mkdir -p "$ZD_ConfigDataPath"
 
 # --------------------------------------------------
 

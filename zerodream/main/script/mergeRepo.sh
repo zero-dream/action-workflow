@@ -13,6 +13,7 @@ copyDirArr=(
   'data/config'
 )
 for copyDir in "${copyDirArr[@]}"; do
+  mkdir -p "$ZD_RootPath/$copyDir/"
   find "$repoPath/zerodream/$copyDir/" -mindepth 1 -delete
   cp -a "$ZD_RootPath/$copyDir/." "$repoPath/zerodream/$copyDir/"
 done
