@@ -11,7 +11,7 @@ function readConfig() {
   # Param
   local name=$1
   # ReadConfig
-  echo $(json5 "$ZD_ConfigDataPath/$name.json5")
+  [[ -s "$ZD_ConfigDataPath/$name.json5" ]] && echo "$(json5 "$ZD_ConfigDataPath/$name.json5")" || echo ""
   # Return
   return 0
 }
