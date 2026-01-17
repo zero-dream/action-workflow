@@ -36,6 +36,12 @@ function cloneRepo() {
 function pushRepo() {
   # Param
   local commit=$1
+
+  # DeleteAndCopy
+  # copyDirArr=(
+  #   'data/config'
+  # )
+
   # MergeRepo
   find "$GITHUB_WORKSPACE/" -mindepth 1 -delete
   cp -a "$__ZeroRepoPath/." "$GITHUB_WORKSPACE/"

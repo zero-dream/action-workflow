@@ -9,6 +9,9 @@ setEnv 'ZD_LibPath' "$ZD_RootPath/library"
 setEnv 'ZD_AppLibPath' "$ZD_LibPath/application"
 setEnv 'ZD_ScriptLibPath' "$ZD_LibPath/script"
 
+# ConfigPath
+setEnv 'ZD_ConfigPath' "$ZD_RootPath/config"
+
 # DataPath
 setEnv 'ZD_DataPath' "$ZD_RootPath/data"
 setEnv 'ZD_ConfigDataPath' "$ZD_DataPath/config"
