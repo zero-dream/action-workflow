@@ -4,23 +4,20 @@
 
 # --------------------------------------------------
 
-
-
-# --------------------------------------------------
-
 # GitClone
 workflowRepo="zero-dream/action-workflow"
 repoPath="$ZD_TempPath/__ZeroWorkflowRepo"
 git clone --depth=1 https://github.com/$workflowRepo.git "$repoPath/" || exit 1 # Exit
-# DeleteAndCopy
-copyDirArr=(
-  'data/config'
-)
-for copyDir in "${copyDirArr[@]}"; do
-  mkdir -p "$ZD_RootPath/$copyDir/"
-  find "$repoPath/zerodream/$copyDir/" -mindepth 1 -delete
-  cp -a "$ZD_RootPath/$copyDir/." "$repoPath/zerodream/$copyDir/"
+
+# KeepDirArr
+initCfgPath="$__ZeroScriptDir/../config/init.json5"
+initCfgJson=$(json5 "$initCfgPath")
+echo "$initCfgJson" | jq -r '.keepDirArr' | while read keepDir; do
+  mkdir -p "$ZD_RootPath/$keepDir/"
+  find "$repoPath/zerodream/$keepDir/" -mindepth 1 -delete
+  cp -a "$ZD_RootPath/$keepDir/." "$repoPath/zerodream/$keepDir/"
 done
+
 # MergeRepo
 find "$ZD_RootPath/" -mindepth 1 -delete
 cp -a "$repoPath/zerodream/." "$ZD_RootPath/"

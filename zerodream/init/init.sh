@@ -5,15 +5,15 @@
 # --------------------------------------------------
 
 # ScriptDir
-scriptDir=$(dirname "${BASH_SOURCE[0]}")
+__ZeroScriptDir=$(dirname "${BASH_SOURCE[0]}")
 
 # CheckScript
-find "$scriptDir/" -type f \
+find "$__ZeroScriptDir/" -type f \
   -exec chmod +x {} \;
 
 # Source
-chmod +x "$scriptDir/../library/script/setEnv.sh"
-source "$scriptDir/../library/script/setEnv.sh"
+chmod +x "$__ZeroScriptDir/../library/script/setEnv.sh"
+source "$__ZeroScriptDir/../library/script/setEnv.sh"
 
 # --------------------------------------------------
 
@@ -33,10 +33,10 @@ setEnv 'CI_StoragePath' "$GITHUB_WORKSPACE/storage"
 # --------------------------------------------------
 
 # ZeroDreamCore
-source "$scriptDir/script/initEnv.sh"
-source "$scriptDir/script/mergeRepo.sh"
-source "$scriptDir/script/check.sh"
-source "$scriptDir/script/envVar.sh"
+source "$__ZeroScriptDir/script/initEnv.sh"
+source "$__ZeroScriptDir/script/mergeRepo.sh"
+source "$__ZeroScriptDir/script/check.sh"
+source "$__ZeroScriptDir/script/envVar.sh"
 
 # --------------------------------------------------
 
