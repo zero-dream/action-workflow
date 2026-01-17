@@ -1,0 +1,10 @@
+[
+  {
+    "name": "luci-theme-argon",
+    "repo": "jerrykuku/luci-theme-argon",
+  },
+  {
+    "name": "luci-app-argon-config",
+    "repo": "jerrykuku/luci-app-argon-config",
+  },
+]
