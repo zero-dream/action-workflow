@@ -41,6 +41,7 @@ function pushRepo() {
   initCfgPath="$ZD_ConfigPath/init.json5"
   initCfgJson=$(json5 "$initCfgPath")
   echo "$initCfgJson" | jq -r '.keepDirArr[]' | while read keepDir; do
+    mkdir -p "$__ZeroRepoPath/zerodream/$keepDir/"
     find "$__ZeroRepoPath/zerodream/$keepDir/" -mindepth 1 -delete
     cp -a "$ZD_RootPath/$keepDir/." "$__ZeroRepoPath/zerodream/$keepDir/"
   done
