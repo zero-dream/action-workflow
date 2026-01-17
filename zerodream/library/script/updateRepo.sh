@@ -37,10 +37,13 @@ function pushRepo() {
   # Param
   local commit=$1
 
-  # DeleteAndCopy
-  # copyDirArr=(
-  #   'data/config'
-  # )
+  # KeepDirArr
+  initCfgPath="$ZD_ConfigPath/init.json5"
+  initCfgJson=$(json5 "$initCfgPath")
+  echo "$initCfgJson" | jq -r '.keepDirArr[]' | while read keepDir; do
+    find "$__ZeroRepoPath/zerodream/$keepDir/" -mindepth 1 -delete
+    cp -a "$ZD_RootPath/$keepDir/." "$__ZeroRepoPath/zerodream/$keepDir/"
+  done
 
   # MergeRepo
   find "$GITHUB_WORKSPACE/" -mindepth 1 -delete
