@@ -33,6 +33,7 @@ setEnv 'CI_StoragePath' "$GITHUB_WORKSPACE/storage"
 # --------------------------------------------------
 
 # ZeroDreamCore
+source "$scriptDir/script/initEnv.sh"
 source "$scriptDir/script/mergeRepo.sh"
 source "$scriptDir/script/check.sh"
 source "$scriptDir/script/envVar.sh"
