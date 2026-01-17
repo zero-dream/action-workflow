@@ -11,7 +11,7 @@ function readConfig() {
   # Param
   local name=$1
   # ReadConfig
-  [[ -s "$ZD_ConfigDataPath/$name.json5" ]] && echo "$(json5 "$ZD_ConfigDataPath/$name.json5")" || echo ""
+  echo $(cat "$ZD_ConfigDataPath/$name")
   # Return
   return 0
 }
@@ -24,7 +24,7 @@ function writeConfig() {
   local name=$1
   local config=$2
   # WriteConfig
-  echo "$config" >"$ZD_ConfigDataPath/$name.json5"
+  echo "$config" >"$ZD_ConfigDataPath/$name"
   # Return
   return 0
 }
@@ -35,7 +35,7 @@ function deleteConfig() {
   # Param
   local name=$1
   # DeleteConfig
-  rm "$ZD_ConfigDataPath/$name.json5"
+  rm "$ZD_ConfigDataPath/$name"
   # Return
   return 0
 }
