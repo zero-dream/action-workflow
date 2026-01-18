@@ -8,12 +8,17 @@
 [[ -d "$GITHUB_WORKSPACE/" ]] && find "$GITHUB_WORKSPACE/" -type f \
   -iregex ".*\.\(sh\|hook\)$" \
   -exec chmod +x {} \;
-[[ -d "$ZD_RootPath/" ]] && find "$ZD_RootPath/" -type f \
-  ! -name '.gitkeep' \
-  -exec chmod +x {} \;
-[[ -d "$CI_AppPath/" ]] && find "$CI_AppPath/" -type f \
-  ! -name '.gitkeep' \
-  -exec chmod +x {} \;
+
+# CheckScript
+scriptDirs=(
+  "$ZD_RootPath/library/"
+  "$CI_AppPath/"
+)
+for scriptDir in "${scriptDirs[@]}"; do
+  [[ -d "$scriptDir/" ]] && find "$scriptDir/" -type f \
+    ! -name '.gitkeep' \
+    -exec chmod +x {} \;
+done
 
 # --------------------------------------------------
 
