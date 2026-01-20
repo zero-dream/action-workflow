@@ -4,6 +4,15 @@
 
 # --------------------------------------------------
 
+# ScriptDir
+__ScriptDir=$(dirname "${BASH_SOURCE[0]}")
+
+# Source
+chmod +x "$__ScriptDir/../../library/script/setEnv.sh"
+source "$__ScriptDir/../../library/script/setEnv.sh"
+
+# --------------------------------------------------
+
 # LibraryPath
 setEnv 'ZD_LibPath' "$ZD_RootPath/library"
 setEnv 'ZD_AppLibPath' "$ZD_LibPath/application"
