@@ -9,4 +9,4 @@ sudo npm install -g json5 &>/dev/null
 
 # --------------------------------------------------
 
-return 0
+exit 0

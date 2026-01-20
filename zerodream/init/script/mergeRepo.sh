@@ -4,13 +4,18 @@
 
 # --------------------------------------------------
 
+# ScriptDir
+__ScriptDir=$(dirname "${BASH_SOURCE[0]}")
+
+# --------------------------------------------------
+
 # GitClone
 workflowRepo="zero-dream/action-workflow"
 repoPath="$ZD_TempPath/__ZeroWorkflowRepo"
 git clone --depth=1 https://github.com/$workflowRepo.git "$repoPath/" || exit 1 # Exit
 
 # KeepDirArr
-initCfgPath="$__ZeroScriptDir/../config/init.json5"
+initCfgPath="$__ScriptDir/../../config/init.json5"
 initCfgJson=$(json5 "$initCfgPath")
 echo "$initCfgJson" | jq -r '.keepDirArr[]' | while read keepDir; do
   mkdir -p "$ZD_RootPath/$keepDir/"
@@ -25,4 +30,4 @@ rm -rf "$repoPath/"
 
 # --------------------------------------------------
 
-return 0
+exit 0

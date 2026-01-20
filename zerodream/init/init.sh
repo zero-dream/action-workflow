@@ -5,15 +5,15 @@
 # --------------------------------------------------
 
 # ScriptDir
-__ZeroScriptDir=$(dirname "${BASH_SOURCE[0]}")
+__ScriptDir=$(dirname "${BASH_SOURCE[0]}")
 
 # CheckScript
-find "$__ZeroScriptDir/" -type f \
+find "$__ScriptDir/" -type f \
   -exec chmod +x {} \;
 
 # Source
-chmod +x "$__ZeroScriptDir/../library/script/setEnv.sh"
-source "$__ZeroScriptDir/../library/script/setEnv.sh"
+chmod +x "$__ScriptDir/../library/script/setEnv.sh"
+source "$__ScriptDir/../library/script/setEnv.sh"
 
 # --------------------------------------------------
 
@@ -33,12 +33,12 @@ setEnv 'CI_StoragePath' "$GITHUB_WORKSPACE/storage"
 # --------------------------------------------------
 
 # ZeroDreamCore
-source "$__ZeroScriptDir/script/initEnv.sh"
-source "$__ZeroScriptDir/script/mergeRepo.sh"
-source "$__ZeroScriptDir/script/check.sh"
-source "$__ZeroScriptDir/script/envVar.sh"
+bash "$__ScriptDir/script/initEnv.sh"
+bash "$__ScriptDir/script/mergeRepo.sh"
+bash "$__ScriptDir/script/check.sh"
+bash "$__ScriptDir/script/envVar.sh"
 
 # --------------------------------------------------
 
 # Must, otherwise the status code will be that of the previous command
-return 0
+exit 0
