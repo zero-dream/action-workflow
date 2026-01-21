@@ -9,7 +9,7 @@
 # --------------------------------------------------
 
 # Source
-source "$ZD_ScriptLibPath/gitPush.sh"
+source "$ZD_LibPath/gitPush.sh"
 
 # --------------------------------------------------
 

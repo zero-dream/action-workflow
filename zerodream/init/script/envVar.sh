@@ -13,22 +13,28 @@ source "$__ScriptDir/../../library/script/setEnv.sh"
 
 # --------------------------------------------------
 
-# LibraryPath
+# ZDEnv
+setEnv 'ZD_Owner' 'zero-dream'
+setEnv 'ZD_DATE' "$(TZ=UTC date '+%y%m%d%H%M%S')"
+setEnv 'ZD_RootPath' "$GITHUB_WORKSPACE/zerodream"
+setEnv 'ZD_HookPath' "$GITHUB_WORKSPACE/hook"
+setEnv 'ZD_TempPath' "$GITHUB_WORKSPACE/.zerodream-temp" && mkdir -p "$ZD_TempPath"
+
+# ZDRootEnv
 setEnv 'ZD_LibPath' "$ZD_RootPath/library"
-setEnv 'ZD_AppLibPath' "$ZD_LibPath/application"
-setEnv 'ZD_ScriptLibPath' "$ZD_LibPath/script"
-
-# ConfigPath
 setEnv 'ZD_ConfigPath' "$ZD_RootPath/config"
-
-# DataPath
 setEnv 'ZD_DataPath' "$ZD_RootPath/data"
-setEnv 'ZD_ConfigDataPath' "$ZD_DataPath/config"
+
+# CIEnv
+setEnv 'CI_AppPath' "$GITHUB_WORKSPACE/application"
+setEnv 'CI_ConfigPath' "$GITHUB_WORKSPACE/config"
+setEnv 'CI_ScriptPath' "$GITHUB_WORKSPACE/script"
+setEnv 'CI_StoragePath' "$GITHUB_WORKSPACE/storage"
 
 # --------------------------------------------------
 
 # Source
-source "$ZD_ScriptLibPath/createPath.sh"
+source "$ZD_LibPath/createPath.sh"
 
 # --------------------------------------------------
 
