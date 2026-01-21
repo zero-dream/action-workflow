@@ -15,6 +15,7 @@
   | hook | Workflow SpecialUse Directory |
   | application | Application Directory |
   | config | Configuration Directory |
+  | library | Library Directory |
   | script | Script Directory |
   | storage | Storage Directory |
 
