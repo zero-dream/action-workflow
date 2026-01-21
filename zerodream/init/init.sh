@@ -4,15 +4,6 @@
 
 # --------------------------------------------------
 
-# ScriptDir
-__ScriptDir=$(dirname "${BASH_SOURCE[0]}")
-
-# CheckScript
-find "$__ScriptDir/" -type f \
-  -exec chmod +x {} \;
-
-# --------------------------------------------------
-
 # ZeroDreamCore
 bash "$__ScriptDir/script/envVar.sh"
 bash "$__ScriptDir/script/initEnv.sh"

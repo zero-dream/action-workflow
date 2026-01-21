@@ -8,8 +8,7 @@
 __ScriptDir=$(dirname "${BASH_SOURCE[0]}")
 
 # Source
-chmod +x "$__ScriptDir/../../library/script/setEnv.sh"
-source "$__ScriptDir/../../library/script/setEnv.sh"
+source "$__ScriptDir/../../library/setEnv.sh"
 
 # --------------------------------------------------
 
