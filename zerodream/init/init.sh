@@ -7,6 +7,9 @@
 # ScriptDir
 __ScriptDir=$(dirname "${BASH_SOURCE[0]}")
 
+# Source
+source "$__ScriptDir/../library/setEnv.sh"
+
 # --------------------------------------------------
 
 # ZDEnv
