@@ -13,13 +13,6 @@ source "$__ScriptDir/../../library/createPath.sh"
 
 # --------------------------------------------------
 
-# ZDEnv
-setEnv 'ZD_Owner' 'zero-dream'
-setEnv 'ZD_DATE' "$(TZ=UTC date '+%y%m%d%H%M%S')"
-setEnv 'ZD_RootPath' "$GITHUB_WORKSPACE/zerodream"
-setEnv 'ZD_HookPath' "$GITHUB_WORKSPACE/hook"
-setEnv 'ZD_TempPath' "$GITHUB_WORKSPACE/.zerodream-temp" && mkdir -p "$ZD_TempPath"
-
 # ZDRootEnv
 setEnv 'ZD_LibPath' "$ZD_RootPath/library"
 setEnv 'ZD_ConfigPath' "$ZD_RootPath/config"
@@ -43,4 +36,4 @@ setEnv 'ZD_ArtifactUploadPath' "$artifactUploadPath"
 
 # --------------------------------------------------
 
-return 0
+exit 0
