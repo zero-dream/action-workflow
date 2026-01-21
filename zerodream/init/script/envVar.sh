@@ -9,6 +9,7 @@ __ScriptDir=$(dirname "${BASH_SOURCE[0]}")
 
 # Source
 source "$__ScriptDir/../../library/setEnv.sh"
+source "$__ScriptDir/../../library/createPath.sh"
 
 # --------------------------------------------------
 
@@ -29,11 +30,6 @@ setEnv 'CI_AppPath' "$GITHUB_WORKSPACE/application"
 setEnv 'CI_ConfigPath' "$GITHUB_WORKSPACE/config"
 setEnv 'CI_ScriptPath' "$GITHUB_WORKSPACE/script"
 setEnv 'CI_StoragePath' "$GITHUB_WORKSPACE/storage"
-
-# --------------------------------------------------
-
-# Source
-source "$ZD_LibPath/createPath.sh"
 
 # --------------------------------------------------
 
