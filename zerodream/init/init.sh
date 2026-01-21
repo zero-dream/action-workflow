@@ -4,6 +4,11 @@
 
 # --------------------------------------------------
 
+# ScriptDir
+__ScriptDir=$(dirname "${BASH_SOURCE[0]}")
+
+# --------------------------------------------------
+
 # ZeroDreamCore
 bash "$__ScriptDir/script/envVar.sh"
 bash "$__ScriptDir/script/initEnv.sh"
