@@ -43,4 +43,4 @@ setEnv 'ZD_ArtifactUploadPath' "$artifactUploadPath"
 
 # --------------------------------------------------
 
-exit 0
+return 0

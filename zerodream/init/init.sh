@@ -7,10 +7,12 @@
 # ScriptDir
 __ScriptDir=$(dirname "${BASH_SOURCE[0]}")
 
+# Source
+source "$__ScriptDir/script/envVar.sh"
+
 # --------------------------------------------------
 
 # ZeroDreamCore
-bash "$__ScriptDir/script/envVar.sh"
 bash "$__ScriptDir/script/initEnv.sh"
 bash "$__ScriptDir/script/mergeRepo.sh"
 bash "$__ScriptDir/script/check.sh"
