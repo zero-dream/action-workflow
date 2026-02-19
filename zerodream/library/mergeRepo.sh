@@ -4,7 +4,7 @@
 
 # --------------------------------------------------
 
-# MergeSort: zero-dream/action-workflow > $GITHUB_REPOSITORY > RepoA > RepoB
+# MergeSort: zero-dream/github-action > $GITHUB_REPOSITORY > RepoA > RepoB
 
 # --------------------------------------------------
 

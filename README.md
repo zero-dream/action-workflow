@@ -1,9 +1,9 @@
 
 <div align="center">
 
-  ### Action-Workflow
+  ### GitHub-Action
 
-  The core of all Action-Workflow
+  The core of all GitHub-Action
 
   \--------------------------------------------------
 
